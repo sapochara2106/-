@@ -70,7 +70,7 @@
             100% { transform: translate(0, 0px) rotate(2deg); }
         }
 
-        /* Marker underline animation */
+        /* Marker animation for the warm-text line */
         .marker-underline {
             position: relative;
             display: inline-block;
@@ -151,8 +151,12 @@
             width: auto;
             object-fit: contain;
         }
+        @media (max-width: 640px) {
+            .logo-text-img {
+                height: 28px;
+            }
+        }
 
-        /* Service Cards */
         .service-card {
             transition: all 0.3s ease;
         }
@@ -187,7 +191,7 @@
             object-fit: cover;
         }
 
-        /* Link utility */
+        /* Clickable area fix */
         .tel-link {
             position: relative;
             z-index: 10;
@@ -212,6 +216,7 @@
             </div>
             
             <div class="flex items-center space-x-4">
+                <!-- Phone Button Header -->
                 <a href="tel:0528757555" class="tel-link bg-orange-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-md hover:bg-orange-600 transition-all whitespace-nowrap">
                     <i class="fas fa-phone mr-1.5"></i> 052-875-7555
                 </a>
@@ -230,7 +235,7 @@
                     <a href="#about" class="nav-link scroll-link hover:text-orange-600 transition-colors">私たちの想い</a>
                     <a href="#services" class="nav-link scroll-link hover:text-orange-600 transition-colors">事業紹介</a>
                     <a href="#access" class="nav-link scroll-link hover:text-orange-600 transition-colors">アクセス</a>
-                    <!-- Updated Drive Link -->
+                    <!-- 更新されたGoogleドライブのURL -->
                     <a href="https://drive.google.com/drive/u/1/folders/14kYcAG3oZSc10gyjRiX2GgW3RN9UQwtg" target="_blank" rel="noopener noreferrer" class="nav-link hover:text-orange-600 transition-colors flex items-center">
                         報告書・評価公表 <i class="fas fa-external-link-alt text-[10px] ml-1 opacity-70"></i>
                     </a>
@@ -259,10 +264,17 @@
                 <a href="#services" class="menu-item scroll-link flex items-center p-4 rounded-2xl hover:bg-orange-50 font-bold text-gray-700 transition-all">
                     <i class="fas fa-th-large mr-4 text-orange-400 w-5"></i> 事業一覧
                 </a>
+                <div class="pl-8 flex flex-col space-y-1">
+                    <a href="#service-ueda" class="scroll-link text-sm py-2 text-gray-500 hover:text-orange-500">• 子どもの広場植田</a>
+                    <a href="#service-assertive" class="scroll-link text-sm py-2 text-gray-500 hover:text-orange-500">• アサティブ</a>
+                    <a href="#service-kids" class="scroll-link text-sm py-2 text-gray-500 hover:text-orange-500">• きゃらキッズ</a>
+                    <a href="#service-saiju" class="scroll-link text-sm py-2 text-gray-500 hover:text-orange-500">• 彩樹植田</a>
+                    <a href="#service-ibasyo" class="scroll-link text-sm py-2 text-gray-500 hover:text-orange-500">• 居場所事業</a>
+                </div>
                 <a href="#access" class="menu-item scroll-link flex items-center p-4 rounded-2xl hover:bg-orange-50 font-bold text-gray-700 transition-all">
                     <i class="fas fa-map-marker-alt mr-4 text-orange-400 w-5"></i> アクセス
                 </a>
-                <!-- Updated Drive Link (Mobile) -->
+                <!-- スマホ用メニュー内の更新されたURL -->
                 <a href="https://drive.google.com/drive/u/1/folders/14kYcAG3oZSc10gyjRiX2GgW3RN9UQwtg" target="_blank" rel="noopener noreferrer" class="menu-item flex items-center p-4 rounded-2xl hover:bg-orange-50 font-bold text-gray-700 transition-all">
                     <i class="fas fa-file-alt mr-4 text-orange-400 w-5"></i> 報告書・評価公表など <i class="fas fa-external-link-alt text-[10px] ml-2 opacity-50"></i>
                 </a>
@@ -277,7 +289,7 @@
         <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[65] hidden"></div>
     </header>
 
-    <!-- Main Content (Hero, About, etc. - Content remains as established) -->
+    <!-- Hero Section -->
     <section id="home" class="hero-bg py-12 md:py-24 flex items-center min-h-[500px]">
         <div class="hero-overlay"></div>
         <div class="container mx-auto px-4 relative z-10">
@@ -306,7 +318,7 @@
         </div>
     </section>
 
-    <!-- Other sections omitted for brevity in this display, but they are preserved in the full file -->
+    <!-- About Section -->
     <section id="about" class="py-24 bg-white section-pattern">
         <div class="container mx-auto px-4 text-center max-w-4xl">
             <h3 class="text-4xl font-kids font-bold mb-16 text-orange-600 reveal">私たちの想い</h3>
@@ -324,7 +336,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Overview Section -->
     <section id="services" class="py-24 bg-orange-50/30">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 reveal">
@@ -340,12 +352,245 @@
                     <h4 class="text-xl font-bold mb-3">子どもの広場植田</h4>
                     <p class="text-sm text-gray-500 leading-relaxed">児童発達支援<br>放課後等デイサービス</p>
                 </a>
-                <!-- Other cards... -->
+                <a href="#service-assertive" class="scroll-link service-card bg-white p-8 rounded-[2.5rem] shadow-lg border border-orange-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 mb-6 text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">子どもの広場アサティブ</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">不登校の子が多く通う<br>放課後等デイサービス</p>
+                </a>
+                <a href="#service-kids" class="scroll-link service-card bg-white p-8 rounded-[2.5rem] shadow-lg border border-orange-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 mb-6 text-2xl">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">きゃらキッズ</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">民間学童保育</p>
+                </a>
+                <a href="#service-saiju" class="scroll-link service-card bg-white p-8 rounded-[2.5rem] shadow-lg border border-orange-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 mb-6 text-2xl">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">彩樹植田</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">就労継続支援B型</p>
+                </a>
+                <a href="#service-ibasyo" class="scroll-link service-card bg-white p-8 rounded-[2.5rem] shadow-lg border border-pink-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-pink-500 mb-6 text-2xl">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">居場所事業</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        天白つながり文庫<br>
+                        ぬくぬくルーム<br>
+                        ストックサテライト
+                    </p>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer, Access sections etc... -->
+    <!-- Detail Sections -->
+    <section id="service-ueda" class="py-24 bg-white border-b border-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <div class="slider-container" id="ueda-slider">
+                        <div class="slider-wrapper" id="ueda-slider-wrapper">
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1Wh7e-xZh_f_b_RPVzuqrGQhqV6Y5PoBK" alt="子どもの広場植田1">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1cdxrve0jRjhB2TX9xaF4_hkDIaSa8Jkp" alt="子どもの広場植田2">
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('ueda', 0)"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('ueda', 1)"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal">
+                    <span class="text-orange-500 font-bold tracking-widest text-sm mb-4 block">児童発達支援・放課後等デイサービス</span>
+                    <h3 class="text-4xl font-kids font-bold mb-6">子どもの広場植田</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        発達の遅れや障がいのあるお子さんを対象とした支援施設です。個々の特性に寄り添いながら、遊びや創作活動を通じて、社会性や自己肯定感を育むサポートを行います。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-assertive" class="py-24 bg-blue-50/30 border-b border-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <div class="slider-container" id="assertive-slider">
+                        <div class="slider-wrapper" id="assertive-slider-wrapper">
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1Bah4cFVNdSs1touq677ryo-jXPS0Fh4P" alt="アサティブ1">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1iq78tX10GTag_fzewavjhCGW9l67XFCh" alt="アサティブ2">
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('assertive', 0)"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('assertive', 1)"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm mb-4 block">不登校の子が多く通う放課後等デイサービス</span>
+                    <h3 class="text-4xl font-kids font-bold mb-6">子どもの広場アサティブ</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        学校に行きづらさを感じている小中学生を主な対象とした、心の充電ができる居場所です。自分のペースを尊重し、「何もしなくてもいい時間」や「誰かとつながる時間」を大切にします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-kids" class="py-24 bg-white border-b border-green-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <img src="https://lh3.googleusercontent.com/d/14pu0qTdnZa10ETNsqVnPClMHL4acQ5Uv" class="rounded-[3rem] shadow-2xl w-full h-[400px] object-cover" alt="きゃらキッズ">
+                </div>
+                <div class="lg:w-1/2 reveal">
+                    <span class="text-green-600 font-bold tracking-widest text-sm mb-4 block">民間学童保育</span>
+                    <h3 class="text-4xl font-kids font-bold mb-6">きゃらキッズ</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        働くパパ・ママを支え、お子さんが安全で豊かに放課後を過ごせる場です。公的な枠組みに囚われない柔軟な対応と、温かな家庭的な雰囲気を提供します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-saiju" class="py-24 bg-yellow-50/20 bg-dot border-b border-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <div class="slider-container" id="saiju-slider">
+                        <div class="slider-wrapper" id="saiju-slider-wrapper">
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1azqcx2-Smy8VrWyh3pPdN42fqJFYu2mu" alt="彩樹1">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1-g4X4Qzpk78K6X5KaaRwRNuP1c3qarAW" alt="彩樹2">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://lh3.googleusercontent.com/d/1Lu2DuoTmmTE9ffYkMxR_VnDvi-rihJaD" alt="彩樹3">
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('saiju', 0)"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('saiju', 1)"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50" onclick="setSlide('saiju', 2)"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal">
+                    <span class="text-yellow-600 font-bold tracking-widest text-sm mb-4 block">就労継続支援B型</span>
+                    <h3 class="text-4xl font-kids font-bold mb-6">彩樹植田（さいじゅ）</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        障がいをお持ちの方が、作業を通じて社会とつながり、自立を目指すための施設です。手づくり雑貨の制作や販売・子どもの見守りなどの仕事があります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-ibasyo" class="py-24 bg-pink-50/20 bg-dot">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <span class="text-pink-500 font-bold tracking-widest text-sm mb-4 block">居場所事業</span>
+                <h3 class="text-4xl font-kids font-bold mb-10">地域の多世代が繋がる場</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100">
+                        <div class="text-pink-500 mb-4 text-xl"><i class="fas fa-book-open"></i></div>
+                        <h4 class="font-bold text-gray-800">天白つながり文庫</h4>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100">
+                        <div class="text-pink-500 mb-4 text-xl"><i class="fas fa-mug-hot"></i></div>
+                        <h4 class="font-bold text-gray-800">ぬくぬくルーム</h4>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100">
+                        <div class="text-pink-500 mb-4 text-xl"><i class="fas fa-satellite-dish"></i></div>
+                        <h4 class="font-bold text-gray-800">ストックサテライト</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access" class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl font-kids font-bold mb-4 text-orange-400">アクセス</h3>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 mb-16 items-start">
+                <div class="lg:w-1/2 w-full reveal">
+                    <div class="space-y-10">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center text-orange-400 mr-6 border border-gray-700">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">所在地</p>
+                                <p class="text-xl font-bold">名古屋市天白区植田1-2102サンパレス植田1階</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Access Main -->
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center text-orange-400 mr-6 border border-gray-700">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">お電話 (タップで発信)</p>
+                                <a href="tel:0528757555" class="tel-link text-3xl font-bold tracking-wider hover:text-orange-400 transition-colors inline-block">
+                                    052-875-7555
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full h-[400px] reveal">
+                    <div class="w-full h-full rounded-[3rem] overflow-hidden border-4 border-gray-800 shadow-2xl">
+                        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps?output=embed&q=名古屋市天白区植田1-2102+サンパレス植田&z=16" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal mt-12 pt-12 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/2 bg-gray-800 p-4 rounded-[2rem]">
+                        <img src="https://lh3.googleusercontent.com/d/1R3CCHnpNwgcgk3dqoKs2yfTbQ5T9yimD" class="w-full h-64 object-cover rounded-[1.5rem] mb-4" alt="駐車場入口">
+                        <p class="text-center text-sm text-gray-400 font-bold">駐車場入口</p>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-800 p-4 rounded-[2rem]">
+                        <img src="https://lh3.googleusercontent.com/d/13v1qZmXG8GquRo_OKO9JW6INPWR8QdoG" class="w-full h-64 object-cover rounded-[1.5rem] mb-4" alt="駐車スペース">
+                        <p class="text-center text-sm text-gray-400 font-bold">駐車スペース詳細</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16 border-t border-orange-50">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8 flex justify-center items-center space-x-3">
+                <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center shadow-sm overflow-hidden border border-orange-200">
+                    <img src="https://lh3.googleusercontent.com/d/1kvqPUnpoFQ9AZsF588AH3f1aVZjzGpMh" alt="アイコン" class="logo-img">
+                </div>
+                <img src="https://lh3.googleusercontent.com/d/1IzOIixkN6gQL7nqpq4GGF5JX69Uw2DMv" alt="テキストロゴ" class="logo-text-img">
+            </div>
+            <p class="text-xs text-gray-400 tracking-widest">&copy; 2023 General Incorporated Association Support Cara.</p>
+        </div>
+    </footer>
 
     <script>
         // Menu functionality
@@ -374,7 +619,12 @@
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
-                if (!href || href.startsWith('tel:') || href.startsWith('http')) return;
+                
+                // Ignore phone links or external links for smooth scroll
+                if (!href || href.startsWith('tel:') || href.startsWith('http')) {
+                    return;
+                }
+
                 if (href.startsWith('#')) {
                     e.preventDefault();
                     const targetElement = document.querySelector(href);
@@ -396,6 +646,36 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Slider Logic
+        const sliderState = {
+            ueda: { current: 0, total: 2 },
+            assertive: { current: 0, total: 2 },
+            saiju: { current: 0, total: 3 }
+        };
+
+        function updateSlider(id) {
+            const state = sliderState[id];
+            const wrapper = document.getElementById(`${id}-slider-wrapper`);
+            const dots = document.querySelectorAll(`#${id}-slider button`);
+            if (wrapper) wrapper.style.transform = `translateX(-${state.current * 100}%)`;
+            dots.forEach((dot, idx) => {
+                dot.style.backgroundColor = idx === state.current ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.5)';
+            });
+        }
+
+        window.setSlide = function(id, idx) {
+            sliderState[id].current = idx;
+            updateSlider(id);
+        };
+
+        Object.keys(sliderState).forEach(id => {
+            updateSlider(id);
+            setInterval(() => {
+                sliderState[id].current = (sliderState[id].current + 1) % sliderState[id].total;
+                updateSlider(id);
+            }, 5000);
+        });
     </script>
 </body>
 </html>
